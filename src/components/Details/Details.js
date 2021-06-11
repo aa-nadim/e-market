@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import { loadProducts } from '../../store/actions/productActions';
 import currencyFormatter from "currency-formatter";
 import { BsDash, BsPlus } from "react-icons/bs";
-
+import './Details.css';
 const Details = () => {
     const [quantity, setQuantity] = useState(1);
     const { id } = useParams();
@@ -22,7 +22,8 @@ const Details = () => {
         }
     }
     return (
-        <div className="container mt-100">
+        <>
+        <div style={{marginTop:"120px"}} className="container mt-100">
            <div className="row">
                 <div className="col-6">
                     <div className="details__image">
@@ -47,12 +48,12 @@ const Details = () => {
                     </div>
                     <div className="details__p">
                         <h4>Details</h4>
-                        {/* {targetedProduct.desc} */}
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem temporibus nulla, doloremque vel aperiam nisi quasi iure alias, ratione, nostrum hic voluptas reprehenderit velit commodi voluptatibus placeat praesentium accusantium excepturi?</p>
                     </div>
                 </div>
            </div>
         </div>
+        </>
     )
 }
 

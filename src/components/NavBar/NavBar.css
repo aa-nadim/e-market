@@ -1,0 +1,30 @@
+.navBar-basket-icon {
+  color: #d8550a;
+  font-size: 22px;
+}
+.navBar-basket {
+  position: relative;
+}
+.navBar-basket span {
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  position: absolute;
+  right: -15px;
+  top: -10px;
+  width: 25px;
+  height: 25px;
+  background: rgb(4, 79, 240);
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .navBar-basket {
+    position: relative;
+  }
+  .navBar-basket span {
+    left: +10px;
+  }
+}

@@ -14,11 +14,11 @@ const CartReducer = (state = initialState, action) => {
             if(check){
                 return state;
             } else {
-                const Tprice = state.totalPrice + 450 * quantity;
+                const Tprice = state.totalPrice + (450 * quantity);
                 const Tquantities = state.totalQuantities + quantity;
                 targetedProduct.quantity = quantity;
                 return {
-                    ...state, products: [...state.products, targetedProduct],totalPrice: Tprice, totalQuantities: Tquantities 
+                    ...state, products: [...state.products, targetedProduct],totalPrice: Tprice, totalQuantities: Tquantities
                 }
             }
         case 'INC':
@@ -28,7 +28,7 @@ const CartReducer = (state = initialState, action) => {
             state.products[index] = findPro;
             return {
                 ...state,
-                totalPrice: state.totalPrice + findPro.discountPrice, totalQuantities: state.totalQuantities+1
+                totalPrice: state.totalPrice + 450, totalQuantities: state.totalQuantities+1
             }
         case "DEC":
             findPro = state.products.find(product => product.id === action.payload);
@@ -37,7 +37,7 @@ const CartReducer = (state = initialState, action) => {
                 findPro.quantity -= 1;
                 state.products[index] = findPro;
                 return {
-                    ...state,totalPrice: state.totalPrice - findPro.discountPrice, totalQuantities: state.totalQuantities - 1
+                    ...state,totalPrice: state.totalPrice - 450, totalQuantities: state.totalQuantities - 1
                 }
             } else {
                     return state;
@@ -48,7 +48,7 @@ const CartReducer = (state = initialState, action) => {
             return {
                 ...state,
                 products: filtered,
-                totalPrice: state.totalPrice - findPro.discountPrice * findPro.quantity, totalQuantities: state.totalQuantities - findPro.quantity
+                totalPrice: state.totalPrice - 450 * findPro.quantity, totalQuantities: state.totalQuantities - findPro.quantity
             }
         default: 
             return state;

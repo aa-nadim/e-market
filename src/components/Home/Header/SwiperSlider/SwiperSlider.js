@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import ImageOne from '../../images/1.jpg';
-import ImageTwo from '../../images/2.jpg';
-import ImageThree from '../../images/3.jpg';
-import ImageFour from '../../images/4.jpg';
+import ImageOne from '../../../../images/1.jpg';
+import ImageTwo from '../../../../images/2.jpg';
+import ImageThree from '../../../../images/3.jpg';
+import ImageFour from '../../../../images/4.jpg';
 
 // Import Swiper styles
 import 'swiper/swiper.min.css';
