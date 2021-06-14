@@ -10,7 +10,7 @@ const CartReducer = (state = initialState, action) => {
         case 'ADD_TO_CART':
             const { targetedProduct, quantity } = action.payload;
             // console.log(targetedProduct, quantity);
-            const check = state.products.find(product => product.id === targetedProduct.id);
+            const check = state.products.find(product => product._id === targetedProduct._id);
             if(check){
                 return state;
             } else {
@@ -22,8 +22,8 @@ const CartReducer = (state = initialState, action) => {
                 }
             }
         case 'INC':
-            findPro = state.products.find(product => product.id === action.payload);
-            index = state.products.findIndex(product => product.id === action.payload);
+            findPro = state.products.find(product => product._id === action.payload);
+            index = state.products.findIndex(product => product._id === action.payload);
             findPro.quantity += 1;
             state.products[index] = findPro;
             return {
@@ -31,8 +31,8 @@ const CartReducer = (state = initialState, action) => {
                 totalPrice: state.totalPrice + 450, totalQuantities: state.totalQuantities+1
             }
         case "DEC":
-            findPro = state.products.find(product => product.id === action.payload);
-            index = state.products.findIndex(product => product.id === action.payload);
+            findPro = state.products.find(product => product._id === action.payload);
+            index = state.products.findIndex(product => product._id === action.payload);
             if(findPro.quantity > 1){
                 findPro.quantity -= 1;
                 state.products[index] = findPro;
@@ -43,8 +43,8 @@ const CartReducer = (state = initialState, action) => {
                     return state;
             }
         case 'REMOVE':
-            findPro = state.products.find(product => product.id === action.payload);
-            const filtered = state.products.filter(product => product.id !== action.payload);
+            findPro = state.products.find(product => product._id === action.payload);
+            const filtered = state.products.filter(product => product._id !== action.payload);
             return {
                 ...state,
                 products: filtered,

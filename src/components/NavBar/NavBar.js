@@ -8,8 +8,11 @@ import './NavBar.css';
 
 const NavBar = () => {
     const {totalQuantities} = useSelector(state => state.CartReducer)
+    
     const [isSticky, setSticky] = useState(false);
     const [isCollapsed, setCollapsed] = useState(null);
+
+    
     return (
         <>
         <Navbar
@@ -39,9 +42,9 @@ const NavBar = () => {
                     <Nav.Link as={Link} to="/" className="mr-md-5" onClick={() => window.scrollTo(500, 0)} active>Home</Nav.Link>
                     <Nav.Link
                         as={Link}
-                        to="/dashboard/profile"
+                        to="/addProduct"
                         className="mr-md-5" active>
-                        Dashboard
+                        AddProduct
                     </Nav.Link>
                     <Nav.Link
                         as={Link}
@@ -51,6 +54,14 @@ const NavBar = () => {
                             <BsFillBagFill className="navBar-basket-icon" /><span>{totalQuantities}</span>
                         </div>
                     </Nav.Link>
+                    
+                        <Nav.Link
+                            as={Link}
+                            to="/login"
+                            className="mr-md-5 px-4 btn btn-main" active>
+                            Login
+                        </Nav.Link>
+                    
                 </Nav>
             </Navbar.Collapse>
          </Navbar>

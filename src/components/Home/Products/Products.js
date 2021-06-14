@@ -9,12 +9,13 @@ const Products = () => {
     })
     const dispatch = useDispatch()
     useEffect(() => dispatch(loadProducts()), [dispatch])
+    // console.log(products);
     return (
         <>
             <div className="container">
                 <div className="row">
                     {products.map(product => (
-                        <ProductInfo product={product} key={product.id}></ProductInfo>
+                        <ProductInfo product={product} key={product._id}></ProductInfo>
                     ))}
                 </div>
             </div>

@@ -1,8 +1,7 @@
-import axios from "axios"
 
 export const loadProducts = () => {
     return (dispatch) => {
-        fetch(`https://jsonplaceholder.typicode.com/photos`)
+        fetch(`http://localhost:8080/products`)
         .then(res=> res.json())
         .then(data=> {
             dispatch({

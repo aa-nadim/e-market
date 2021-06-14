@@ -5,16 +5,17 @@ import currencyFormatter from "currency-formatter";
 import './ProductInfo.css';
 
 const ProductInfo = (props) => {
-    const { id, albumId, title, thumbnailUrl, url} = props.product;
+    // console.log(props);
+    const { _id, name, description, price, image} = props.product;
     return (
         <>
-            <div className="col-lg-6 col-xl-4 mt-4" key={id}>
+            <div className="col-lg-6 col-xl-4 mt-4" key={_id}>
                 <Card className="shadow">
                     <div className="product__img">
-                        <Link to={`/details/${id}`}>
+                        <Link to={`/details/${_id}`}>
                             <Card.Img
                                 variant="top"
-                                src={thumbnailUrl}
+                                src={image}
                                 style={{
                                     height: '450px',
                                     padding: '10px',
@@ -26,13 +27,13 @@ const ProductInfo = (props) => {
                         </Link>
                     </div>
                     <Card.Body>
-                        <Card.Title>{title} </Card.Title>
-                        <Card.Text className="text-muted">{title} {title} </Card.Text>
+                        <Card.Title>{name} </Card.Title>
+                        <Card.Text className="text-muted">{description} </Card.Text>
                     </Card.Body>
                     <Card.Footer className="d-flex justify-content-around">
                         <div className="product__price">
                             <span className="actualPrice">
-                                {currencyFormatter.format(500, { code: 'USD' })}
+                                {currencyFormatter.format(price, { code: 'USD' })}
                             </span>{' '}
                             <span className="text-muted">10%</span>
                         </div>
