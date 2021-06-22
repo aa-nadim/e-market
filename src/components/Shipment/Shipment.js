@@ -26,7 +26,7 @@ const Shipment = () => {
         orderTime: new Date() 
       };
   
-      fetch('http://localhost:8080/addOrder', {
+      fetch('https://boiling-stream-07888.herokuapp.com/addOrder', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

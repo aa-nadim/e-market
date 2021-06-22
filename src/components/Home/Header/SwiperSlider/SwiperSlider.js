@@ -30,16 +30,16 @@ export default function App() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img style={{ width: '300px' }} src={ImageOne} alt="" />
+          <img style={{ width: '100%', height: '80%'}} src={ImageOne} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img style={{ width: '300px' }} src={ImageTwo} alt="" />
+          <img style={{ width: '100%' , height: '80%'}} src={ImageTwo} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img style={{ width: '300px' }} src={ImageThree} alt="" />
+          <img style={{ width: '100%' , height: '80%'}} src={ImageThree} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img style={{ width: '300px' }} src={ImageFour} alt="" />
+          <img style={{ width: '100%' , height: '80%'}} src={ImageFour} alt="" />
         </SwiperSlide>
       </Swiper>
     </div>

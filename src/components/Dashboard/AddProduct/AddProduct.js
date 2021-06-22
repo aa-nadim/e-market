@@ -54,7 +54,7 @@ const AddProduct = ({ editProduct, restrictPermission, setEditProduct }) => {
                 setEditProduct({});
                 return toast.error("You haven't changed anything!");
             }
-            axios.patch(`http://localhost:8080/update/${editProduct._id}`, productInfo)
+            axios.patch(`https://boiling-stream-07888.herokuapp.com/update/${editProduct._id}`, productInfo)
                 .then(res => {
                     toast.dismiss(loading);
                     if (res.data) {
@@ -72,7 +72,7 @@ const AddProduct = ({ editProduct, restrictPermission, setEditProduct }) => {
             return;
         }
 
-        axios.post('http://localhost:8080/addProduct', productInfo)
+        axios.post('https://boiling-stream-07888.herokuapp.com/addProduct', productInfo)
             .then(res => {
                 toast.dismiss(loading);
                 if (res.data) {
