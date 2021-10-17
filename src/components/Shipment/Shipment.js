@@ -26,7 +26,7 @@ const Shipment = () => {
         orderTime: new Date() 
       };
   
-      fetch('https://boiling-stream-07888.herokuapp.com/addOrder', {
+      fetch('https://obscure-beach-77356.herokuapp.com/addOrder', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

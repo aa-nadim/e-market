@@ -1,7 +1,7 @@
 
 export const loadProducts = () => {
     return (dispatch) => {
-        fetch(`https://boiling-stream-07888.herokuapp.com/products`)
+        fetch(`https://obscure-beach-77356.herokuapp.com/products`)
         .then(res=> res.json())
         .then(data=> {
             dispatch({
