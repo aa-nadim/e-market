@@ -20,7 +20,8 @@ const NavBar = () => {
             expand="lg"
             variant="light"
             fixed="top"
-            className={(isSticky || isCollapsed) ? "shadow-sm bg-white py-2" : "py-4"}>
+            className="bg-light"
+            >
             
             <Navbar.Brand
                 as={Link} to="/"
