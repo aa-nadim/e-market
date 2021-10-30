@@ -24,7 +24,7 @@ const Footer = () => {
     }, []);
 
     return (
-        <footer id="dk-footer" className="dk-footer my-5">
+        <footer id="dk-footer" className="dk-footer ">
             <Container>
                 <Row>
                     <Col md={12} lg={4}>

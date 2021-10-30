@@ -33,7 +33,7 @@ function App(props) {
 
             <Route path="/login"exact component={Login} />
 
-            <ScrollToTop style={{ backgroundColor: '#12d0d9', padding: '5px' }} />
+            {/* <ScrollToTop style={{ backgroundColor: '#12d0d9', padding: '5px' }} /> */}
           </Provider>
         </Switch>
     </Router>
