@@ -10,7 +10,7 @@ const ProductInfo = (props) => {
     return (
         <>
             <div className="col-lg-6 col-xl-4 mt-4" key={_id}>
-                <Card className="shadow">
+                <Card className="container shadow">
                     <div className="product__img">
                         <Link to={`/details/${_id}`}>
                             <Card.Img

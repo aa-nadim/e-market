@@ -12,8 +12,9 @@ const Products = () => {
     // console.log(products);
     return (
         <>
-            <div className="container">
-                <div className="row">
+            <div className="container my-5">
+                <div className="row my-5">
+                    <h1 className="d-flex justify-content-center my-5">Our Products</h1>
                     {products.map(product => (
                         <ProductInfo product={product} key={product._id}></ProductInfo>
                     ))}
